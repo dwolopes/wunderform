@@ -22,16 +22,15 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-const CustomInputComponent = ({ field, ...props }: any) => {
+const CustomInputComponent = ({ field, form: { touched, errors }, form, ...props }: any) => {
     const classes = useStyles();
-
+    
     return (
         <div>
         <TextField
+            error = { touched[field.name] && errors[field.name]}
             {...field} 
             {...props}
-            required
-            id="filled-firstname-input"
             className={classes.textField}
             margin="normal"
             variant="filled"
