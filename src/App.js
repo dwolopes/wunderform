@@ -8,24 +8,25 @@ import { ToastContainer } from 'react-toastify';
 
 // import { loading, persistPlugin } from './utils/config-state';
 import Routes from './routes';
-// import models from './state';
+import models from './state';
 
 
-// const store = init({
-// 	models,
-// 	plugins: [persistPlugin, loading],
-// });
+const store = init({
+	models
+});
 
-// console.log('Store', store);
+console.log('Store', store);
 
 // const persistor = getPersistor();
 
 const App = () => (
   <>
+  <Provider store={store}>
       <BrowserRouter>
         <Routes/>
       </BrowserRouter>
     <ToastContainer/>
+  </Provider>
   </>
 );
 
