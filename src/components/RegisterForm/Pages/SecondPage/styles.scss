@@ -1,0 +1,30 @@
+form {
+    display: flex;
+}
+
+button {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    background-color: #06a0e3;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: none;
+    color: white;
+
+
+    span {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #06a0e3;
+        right: 19px;
+        top: 0;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+    }
+}

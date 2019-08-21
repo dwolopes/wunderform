@@ -6,28 +6,28 @@ import { getPersistor } from '@rematch/persist';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { ToastContainer } from 'react-toastify';
 
-// import { loading, persistPlugin } from './utils/config-state';
+import { persistPlugin } from './utils/config.state';
 import Routes from './routes';
 import models from './state';
 
-
 const store = init({
-	models
+	models,
+	plugins: [persistPlugin],
 });
 
 console.log('Store', store);
 
-// const persistor = getPersistor();
+const persistor = getPersistor();
 
 const App = () => (
-  <>
-  <Provider store={store}>
-      <BrowserRouter>
-        <Routes/>
-      </BrowserRouter>
-    <ToastContainer/>
-  </Provider>
-  </>
+	<PersistGate persistor={persistor}>
+		<Provider store={store}>
+			<BrowserRouter>
+				<Routes />
+			</BrowserRouter>
+			<ToastContainer />
+		</Provider>
+	</PersistGate>
 );
 
 export default memo(App);
