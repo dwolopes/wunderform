@@ -3,6 +3,7 @@ import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 
 import CustomInputComponent from '../../../Shared/Input';
+import ButtonAnimatedFoward from '../../../Shared/ButtonAnimatedFoward';
 import { FormInformationContext } from '../../../../containers/Register';
 
 import { Personal } from '../../../../@types';
@@ -49,9 +50,7 @@ const FirstPage = ({ setPage, page }: Props) => {
 						<Field name="lastname" type="text" label="Last Name" component={CustomInputComponent} />
 						<Field name="telephone" type="string" label="Telephone" component={CustomInputComponent} />
 					</div>
-					<button type="submit" disabled={!isValid}>
-						Next
-					</button>
+					<ButtonAnimatedFoward disabled={!isValid} content={'Next'}/>
 					{status && status.msg && <div>{status.msg}</div>}
 				</Form>
 			)}

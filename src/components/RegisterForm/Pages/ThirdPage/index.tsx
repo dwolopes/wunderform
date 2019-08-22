@@ -3,11 +3,13 @@ import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 
 import CustomInputComponent from '../../../Shared/Input';
+import ButtonAnimatedBackward from '../../../Shared/ButtonAnimatedBackward';
+import ButtonAnimatedFoward from '../../../Shared/ButtonAnimatedFoward';
 import { FormInformationContext } from '../../../../containers/Register';
 import { Payment } from '../../../../@types';
 
 interface Props {
-	setPage: (value: number) => void;
+	setPage: (value: number) => number;
 	setDisabledDecideStep: (value: boolean) => void;
 	page: number;
 }
@@ -44,17 +46,8 @@ const ThirdPage = ({ setPage, page, setDisabledDecideStep }: Props) => {
 						/>
 						<Field type="string" name="iban" label="IBAN" component={CustomInputComponent} />
 					</div>
-					<button
-						onClick={() => {
-							setPage(page - 1);
-							setDisabledDecideStep(true);
-						}}
-					>
-						Previous Page
-					</button>
-					<button type="submit">
-						Submit
-					</button>
+					<ButtonAnimatedBackward content={'Previous'} page={page} setPage={setPage}/>
+					<ButtonAnimatedFoward disabled={!isValid} content={'Send It!'}/>
 					{status && status.msg && <div>{status.msg}</div>}
 				</Form>
 			)}

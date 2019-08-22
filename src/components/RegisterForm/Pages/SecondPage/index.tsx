@@ -1,45 +1,20 @@
-import React, { memo, useContext, useState } from 'react';
+import React, { memo, useContext } from 'react';
 import { Formik, Field, Form } from 'formik';
 
 import CustomInputComponent from '../../../Shared/Input';
+import ButtonAnimatedFoward from '../../../Shared/ButtonAnimatedFoward';
+import ButtonAnimatedBackward from '../../../Shared/ButtonAnimatedBackward';
 import { FormInformationContext } from '../../../../containers/Register';
 import { Address } from '../../../../@types';
-import { animated, useSpring } from 'react-spring';
 import './styles.scss';
 
 interface Props {
-	setPage: (value: number) => void;
+	setPage: (value: number) => number;
 	setDisabledDecideStep: (value: boolean) => void;
 	page: number;
 }
 
-const ButtonAnimated = ({ disabled }: {disabled: boolean}) => {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const { translate, backgroundColor } = useSpring({
-        translate: isHovered ? 20 : 0,
-        backgroundColor: isHovered ? 'rgba(6, 106, 150, 1)' : 'rgba(6, 160, 227, 1)',
-        config: { duration: 160 }
-    });
-    const toggleIsHovered = () => setIsHovered(prevState => !prevState);
-
-    return (
-        <animated.button
-            style={{backgroundColor}}
-            onMouseEnter={toggleIsHovered}
-            onMouseLeave={toggleIsHovered}
-            type="submit">
-            Next    
-            <animated.span style={{transform: translate.interpolate(x => `translateX(${x}px)`) }}>
-                >
-            </animated.span>
-        </animated.button>
-    )
-}
-
 const SecondPage = ({ setPage, page }: Props) => {
-
-
 
 	const {
 		formInformation: { address },
@@ -66,8 +41,8 @@ const SecondPage = ({ setPage, page }: Props) => {
 						<Field type="string" name="zipcode" label="Zip-Code" component={CustomInputComponent} />
 						<Field type="string" name="city" label="City" component={CustomInputComponent} />
 					</div>
-					<button onClick={() => setPage(page - 1)}>Previous Page</button>
-					<ButtonAnimated disabled={!isValid} />
+					<ButtonAnimatedBackward content={'Previous'} page={page} setPage={setPage}/>
+					<ButtonAnimatedFoward content={'Next'} />
 					{status && status.msg && <div>{status.msg}</div>}
 				</Form>
 			)}

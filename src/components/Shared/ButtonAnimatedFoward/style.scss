@@ -1,0 +1,44 @@
+.foward__button {
+  button {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    background-color: #06a0e3;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    line-height: 22px;
+    padding: .75rem 1.875rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    &>span {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #06a0e3;
+      right: 19px;
+      top: 0;
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+
+      svg {
+        height: 15px;
+        width: 15px;
+        path {
+          transition: 0.3s ease-in-out all;
+          fill:white !important;
+        }
+      }
+    }
+  }
+}
