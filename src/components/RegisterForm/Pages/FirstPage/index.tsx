@@ -27,9 +27,9 @@ const FirstPage = ({ setPage, page }: Props) => {
 		getpersonalInformation,
 	} = useContext(FormInformationContext);
 
-	const nextPage = () => {
-		setPage(page + 1);
-	};
+	// const nextPage = () => {
+	// 	setPage(page + 1);
+	// };
 
 	return (
 		<Formik<Personal>
@@ -41,7 +41,7 @@ const FirstPage = ({ setPage, page }: Props) => {
 			validationSchema={SignupSchema}
 			onSubmit={values => {
 				getpersonalInformation(values);
-				nextPage();
+				setPage(page + 1);
 			}}
 			render={({ status, isValid }) => (
 				<Form>

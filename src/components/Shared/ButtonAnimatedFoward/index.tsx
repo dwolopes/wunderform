@@ -19,14 +19,13 @@ const ButtonAnimatedFoward = ({ disabled, content }: ButtonProps) => {
       : "rgba(6, 160, 227, 1)",
     config: { duration: 160 }
   });
-  const toggleIsHovered = () => setIsHovered(prevState => !prevState);
 
   return (
     <div className="foward__button">
       <animated.button
         style={{ backgroundColor }}
-        onMouseEnter={toggleIsHovered}
-        onMouseLeave={toggleIsHovered}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         type="submit"
       >
         {content}

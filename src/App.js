@@ -15,8 +15,6 @@ const store = init({
 	plugins: [persistPlugin],
 });
 
-console.log('Store', store);
-
 const persistor = getPersistor();
 
 const App = () => (

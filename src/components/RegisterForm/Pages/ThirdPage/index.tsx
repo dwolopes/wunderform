@@ -9,7 +9,7 @@ import { FormInformationContext } from '../../../../containers/Register';
 import { Payment } from '../../../../@types';
 
 interface Props {
-	setPage: (value: number) => number;
+	setPage: (value: number) => void;
 	setDisabledDecideStep: (value: boolean) => void;
 	page: number;
 }
@@ -46,7 +46,12 @@ const ThirdPage = ({ setPage, page, setDisabledDecideStep }: Props) => {
 						/>
 						<Field type="string" name="iban" label="IBAN" component={CustomInputComponent} />
 					</div>
-					<ButtonAnimatedBackward content={'Previous'} page={page} setPage={setPage}/>
+					<ButtonAnimatedBackward 
+						content={'Previous'} 
+						page={page} 
+						setPage={setPage}
+						setDisabledDecideStep={setDisabledDecideStep}
+						/>
 					<ButtonAnimatedFoward disabled={!isValid} content={'Send It!'}/>
 					{status && status.msg && <div>{status.msg}</div>}
 				</Form>

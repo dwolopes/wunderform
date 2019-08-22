@@ -1,21 +1,23 @@
-import React, { memo, useState } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { animated, useSpring } from "react-spring";
 
 import { ReactComponent as Arrowhead } from '../../../assets/icons/right-arrow.svg';
 import "./style.scss";
 
 export interface ButtonProps {
-  setPage: (value: number) => number;
+  setPage: (value: number) => void;
   page: number;
   disabled?: boolean;
   content: string;
+  setDisabledDecideStep: (value: boolean) => void;
 }
 
 const ButtonAnimatedBackward = ({
   disabled,
   content,
   page,
-  setPage
+  setPage,
+  setDisabledDecideStep
 }: ButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -26,15 +28,17 @@ const ButtonAnimatedBackward = ({
       : "rgba(6, 160, 227, 1)",
     config: { duration: 160 }
   });
-  const toggleIsHovered = () => setIsHovered(prevState => !prevState);
 
   return (
     <div className="backward__button">
       <animated.button
         style={{ backgroundColor }}
-        onMouseEnter={toggleIsHovered}
-        onMouseLeave={toggleIsHovered}
-        onClick={() => setPage(page - 1)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={() => {
+          setPage(page - 1);
+          setDisabledDecideStep(true);
+        }}
       >
         {content}
         <animated.span

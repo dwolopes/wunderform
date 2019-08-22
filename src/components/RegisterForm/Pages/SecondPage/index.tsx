@@ -9,17 +9,24 @@ import { Address } from '../../../../@types';
 import './styles.scss';
 
 interface Props {
-	setPage: (value: number) => number;
+	setPage: (value: number) => void;
 	setDisabledDecideStep: (value: boolean) => void;
 	page: number;
 }
 
-const SecondPage = ({ setPage, page }: Props) => {
+const SecondPage = ({ setPage, page, setDisabledDecideStep }: Props) => {
 
 	const {
 		formInformation: { address },
 		getAddressInformation,
 	} = useContext(FormInformationContext);
+
+	// const nextPage = () => {
+	// 	console.log('SetPage Function', setPage);
+	// 	console.log('Page in before', page);
+	// 	setPage(page + 1);
+	// 	console.log('Page in', page);
+	// };
 
 	return (
 		<Formik<Address>
@@ -33,6 +40,7 @@ const SecondPage = ({ setPage, page }: Props) => {
 				getAddressInformation(values);
 				setPage(page + 1);
 			}}
+
 			render={({ status, isValid }) => (
 				<Form>
 					<div>
@@ -41,7 +49,12 @@ const SecondPage = ({ setPage, page }: Props) => {
 						<Field type="string" name="zipcode" label="Zip-Code" component={CustomInputComponent} />
 						<Field type="string" name="city" label="City" component={CustomInputComponent} />
 					</div>
-					<ButtonAnimatedBackward content={'Previous'} page={page} setPage={setPage}/>
+					<ButtonAnimatedBackward 
+						content={'Previous'} 
+						page={page} 
+						setPage={setPage}
+						setDisabledDecideStep={setDisabledDecideStep}
+						/>
 					<ButtonAnimatedFoward content={'Next'} />
 					{status && status.msg && <div>{status.msg}</div>}
 				</Form>
