@@ -1,12 +1,12 @@
 .register__art {
+  display: flex;
+  justify-content: space-around;
   & > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 90px;
   }
-  display: flex;
-  justify-content: space-around;
   h2 {
     font-size: 24px;
     letter-spacing: 2.5px;
@@ -24,6 +24,56 @@
   .resgister__fleet {
     padding: 20px 20px;
   }
+
+  @media only screen and (min-width: 375px) and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    display: block;
+    & > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-left: 0px;
+    }
+    .resgister__fleet {
+      padding: 0px;
+
+      img {
+        width: -webkit-fill-available;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    display: block;
+    & > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-left: 0px;
+    }
+    .resgister__fleet {
+      padding: 0px;
+
+      img {
+        width: -webkit-fill-available;
+      }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    display: block;
+    & > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-left: 0px;
+    }
+    .resgister__fleet {
+      padding: 0px;
+
+      img {
+        width: -webkit-fill-available;
+      }
+    }
+  }
 }
 
 .register__container {
@@ -36,4 +86,37 @@
   height: 310px;
   left: 20px;
   bottom: 10px;
+  @media only screen and (min-width: 375px) and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    width: 100%;
+    position: relative;
+    height: 0; //Precisar declarar isso Junio?
+    left: 0;
+    bottom: 0;
+  }
+  @media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    width: 100%;
+    position: relative;
+    height: 0; //Precisar declarar isso Junio?
+    left: 0;
+    bottom: 0;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    width: 100%;
+    position: relative;
+    height: 0; //Precisar declarar isso Junio?
+    left: 0;
+    bottom: 0;
+  }
 }
