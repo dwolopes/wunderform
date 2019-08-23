@@ -44,12 +44,14 @@ const ThirdPage = ({ setPage, page, setDisabledDecideStep }: Props) => {
               name="accountOwner"
               label="Account Owner"
               component={CustomInputComponent}
+              required={true}
             />
             <Field
               type="string"
               name="iban"
               label="IBAN"
               component={CustomInputComponent}
+              required={true}
             />
           </div>
           <div className="actions__thirdpage">

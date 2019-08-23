@@ -8,6 +8,5 @@ import storageSession from 'redux-persist/lib/storage/session';
 
 export const persistPlugin = createRematchPersist({
     whitelist: ['formInformation'],
-    storage: storageSession,
     version: 1,
 });

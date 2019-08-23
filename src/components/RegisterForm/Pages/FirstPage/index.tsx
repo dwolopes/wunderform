@@ -27,10 +27,6 @@ const FirstPage = ({ setPage, page }: Props) => {
     getpersonalInformation
   } = useContext(FormInformationContext);
 
-  // const nextPage = () => {
-  // 	setPage(page + 1);
-  // };
-
   return (
     <Formik<Personal>
       initialValues={{
@@ -52,6 +48,7 @@ const FirstPage = ({ setPage, page }: Props) => {
                 type="text"
                 label="First Name"
                 component={CustomInputComponent}
+                required={true}
               />
               <Field
                 name="lastname"
@@ -66,6 +63,7 @@ const FirstPage = ({ setPage, page }: Props) => {
                 type="string"
                 label="Telephone"
                 component={CustomInputComponent}
+                required={true}
               />
             </div>
           </div>
