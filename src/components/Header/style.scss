@@ -1,0 +1,19 @@
+.container__header {
+  height: 58px;
+  background-color: #fff;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  & > div {
+    padding-left: 30px;
+  }
+
+  .logo {
+    path {
+      fill: black;
+    }
+  }
+}

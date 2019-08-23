@@ -2,6 +2,7 @@ import React, { memo, useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 import RegisterForm from "../components/RegisterForm";
+import Header from "../components/Header";
 import { Personal, Address, Payment } from "../@types";
 import "./style.scss";
 
@@ -34,7 +35,6 @@ export const FormInformationContext = React.createContext<any>({});
 const Register = (props: MapState & Props) => {
   const [page, setPage] = useState<number>(0);
   const [disabledDecideStep, setDisabledDecideStep] = useState<boolean>(false);
-  // if (!disabledDecideStep) {}
 
   useEffect(() => {
     if (!disabledDecideStep) {
@@ -56,21 +56,24 @@ const Register = (props: MapState & Props) => {
   };
 
   return (
-    <FormInformationContext.Provider
-      value={
-        {
-          formInformation: props.formInformation,
-          getpersonalInformation: props.getpersonalInformation,
-          getAddressInformation: props.getAddressInformation,
-          getPaymentInformation: props.getPaymentInformation,
-          page,
-          setPage,
-          setDisabledDecideStep
-        } as MapState & Props & State
-      }
-    >
-      <RegisterForm />
-    </FormInformationContext.Provider>
+    <>
+      <Header />
+      <FormInformationContext.Provider
+        value={
+          {
+            formInformation: props.formInformation,
+            getpersonalInformation: props.getpersonalInformation,
+            getAddressInformation: props.getAddressInformation,
+            getPaymentInformation: props.getPaymentInformation,
+            page,
+            setPage,
+            setDisabledDecideStep
+          } as MapState & Props & State
+        }
+      >
+        <RegisterForm />
+      </FormInformationContext.Provider>
+    </>
   );
 };
 

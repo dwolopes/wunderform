@@ -1,6 +1,39 @@
-.register__container {
+.register__art {
+  & > div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #fafafa;
+    justify-content: center;
+    padding-left: 90px;
+  }
+  display: flex;
+  justify-content: space-around;
+  h2 {
+    font-size: 24px;
+    letter-spacing: 2.5px;
+    font-weight: 900;
+    line-height: 30px;
+    color: #06a0e3;
+  }
+  p {
+    max-width: 50%;
+    font-weight: 400;
+    font-size: 14px;
+    color: #939a9c;
+    line-height: 19px;
+  }
+  .resgister__fleet {
+    padding: 20px 20px;
+  }
+}
+
+.register__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  position: absolute;
+  width: 600px;
+  height: 310px;
+  left: 20px;
+  bottom: 10px;
 }

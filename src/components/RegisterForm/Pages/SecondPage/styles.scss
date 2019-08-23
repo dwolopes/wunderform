@@ -1,3 +1,10 @@
 form {
+  .inputs__secondpage {
     display: flex;
+  }
+  .actions__secondpage {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+  }
 }
