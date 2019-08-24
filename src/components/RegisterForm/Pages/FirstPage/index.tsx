@@ -1,12 +1,12 @@
-import React, { memo, useContext } from "react";
-import { Formik, Field, Form } from "formik";
-import * as Yup from "yup";
+import React, { memo, useContext } from  'react';
+import { Formik, Field, Form } from 'formik';
+import * as Yup from 'yup';
 
-import CustomInputComponent from "../../../Shared/Input";
-import ButtonAnimatedFoward from "../../../Shared/ButtonAnimatedFoward";
-import { FormInformationContext } from "../../../../containers/Register";
-import { Personal } from "../../../../@types";
-import "./style.scss";
+import CustomInputComponent from '../../../Shared/Input';
+import ButtonAnimatedFoward from '../../../Shared/ButtonAnimatedFoward';
+import { FormInformationContext } from '../../../../containers/Register';
+import { Personal } from '../../../../@types';
+import './style.scss';
 
 interface Props {
   setPage: (value: number) => void;
@@ -30,12 +30,14 @@ const FirstPage = ({ setPage, page }: Props) => {
   return (
     <Formik<Personal>
       initialValues={{
+        customerId: personal.customerId || "",
         firstName: personal.firstName || "",
         lastname: personal.lastname || "",
         telephone: personal.telephone || ""
       }}
       validationSchema={SignupSchema}
       onSubmit={values => {
+        console.log('Values', values);
         getpersonalInformation(values);
         setPage(page + 1);
       }}
@@ -43,6 +45,11 @@ const FirstPage = ({ setPage, page }: Props) => {
         <Form>
           <div className="inputs__firstpage">
             <div>
+              <Field
+                name="customerId"
+                type="hidden"
+                value={"1"}
+              />
               <Field
                 name="firstName"
                 type="text"

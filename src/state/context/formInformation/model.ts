@@ -1,101 +1,108 @@
-import * as repository from './repository';
-import { toast } from 'react-toastify';
-import shortid from 'shortid';
-
-interface PersonaInformation {
-	firstName: string;
-	lastname: string;
-	telephone: string;
-}
-
-interface AddressInformation {
-	street: string;
-	number: number;
-	zipcode: string;
-	city: string;
-}
-
-interface PaymentInformation {
-	accountOwner: string;
-	iban: string;
-}
+import * as repository from "./repository";
+import { toast } from "react-toastify";
+import { Personal, Address, Payment } from "../../../@types";
 
 export const formInformation = {
-	state: {
-		personal: {},
-		address: {
-			street: '',
-			number: 0,
-			zipcode: '',
-			city: '',
-		},
-		payment: {
-			accountOwner: '',
-			iban: '',
-		},
-	},
-	reducers: {
-		personal(state: any, payload: any) {
-			return {
-				...state,
-				personal: { ...state.personal, ...payload },
-			};
-		},
-		address(state: any, payload: any) {
-			return {
-				personal: { ...state.personal },
-				address: { ...state.address, ...payload },
-				payment: { ...state.payment },
-			};
-		},
-		payment(state: any, payload: any) {
-			return {
-				personal: { ...state.personal },
-				address: { ...state.address },
-				payment: { ...state.payment, ...payload },
-			};
-		},
-		clearStore() {
-			return {};
-		},
-	},
-	effects: (dispatch: any) => ({
-		getpersonalInformation(payload: PersonaInformation) {
-			return dispatch.formInformation.personal({
-				_id: shortid.generate(),
-				...payload,
-			});
-		},
+  state: {
+    personal: {},
+    address: {
+      street: "",
+      number: 0,
+      zipcode: "",
+      city: ""
+    },
+    payment: {
+      accountOwner: "",
+      iban: "",
+      paymentIdResponse: {
+		  error: false,
+		  paymentId: ""
+	  }
+    }
+  },
+  reducers: {
+    setPersonalData(state: any, payload: any) {
+      return {
+        ...state,
+        personal: { ...state.personal, ...payload }
+      };
+    },
+    setAddress(state: any, payload: any) {
+      return {
+        ...state,
+        address: { ...state.address, ...payload }
+      };
+    },
+    setPayment(state: any, payload: any) {
+      return {
+        ...state,
+        payment: { ...state.payment, ...payload }
+      };
+    },
+    registerPaymentIdResponse(state: any, paymentIdResponse: any) {
+      return {
+        ...state,
+        payment: {
+          ...state.payment,
+          paymentIdResponse
+        }
+      };
+    },
+    clearStore() {
+      return {};
+    }
+  },
+  effects: (dispatch: any) => ({
+    getpersonalInformation(payload: Personal) {
+      return dispatch.formInformation.setPersonalData({
+        ...payload
+      });
+    },
 
-		getAddressInformation(payload: AddressInformation, getState: any) {
-			const {
-				formInformation: {
-					personal: { _id },
-				},
-			} = getState;
-			return dispatch.formInformation.address({
-				customerId: _id,
-				...payload,
-			});
-		},
+    getAddressInformation(payload: Address, getState: any) {
+      const {
+        formInformation: {
+          personal: { customerId }
+        }
+      } = getState;
+      return dispatch.formInformation.setAddress({
+        customerId: customerId,
+        ...payload
+      });
+    },
 
-		getPaymentInformation(payload: PaymentInformation, getState: any) {
-			const {
-				formInformation: {
-					personal: { _id },
-				},
-			} = getState;
+    async getPaymentInformation(payload: Payment, getState: any) {
+      const {
+        formInformation: {
+          personal: { customerId, firstName, lastname, telephone },
+          address
+        }
+      } = getState;
 
-			console.log(payload);
-			dispatch.formInformation.payment({
-				customerId: _id,
-				...payload,
-			});
-			repository.getHolidays({ customerId: _id, ...payload });
-		},
+      dispatch.formInformation.setPayment({
+        customerId: customerId,
+        ...payload
+      });
 
-		clearStores() {
-			dispatch.calendar.clearStore();
-		},
-	}),
+      try {
+        const response = await repository.registerCustomer({
+          customerId: customerId,
+          owner: `${firstName} ${lastname}`,
+          telephone,
+          address,
+          ...payload
+		});
+		
+		throw response;
+		// Retorna 400, como verificar ?
+
+      } catch (error) {
+        dispatch.formInformation.registerPaymentIdResponse({error:true, paymentId: ""});
+      }
+    },
+
+    clearStores() {
+      dispatch.formInformation.clearStore();
+    }
+  })
 };

@@ -1,8 +1,8 @@
-import React, { memo, useState } from "react";
-import { animated, useSpring } from "react-spring";
+import React, { memo, useState } from 'react';
+import { animated, useSpring } from 'react-spring';
 
 import { ReactComponent as Arrowhead } from '../../../assets/icons/right-arrow.svg';
-import "./style.scss";
+import './style.scss';
 
 export interface ButtonProps {
   disabled?: boolean;

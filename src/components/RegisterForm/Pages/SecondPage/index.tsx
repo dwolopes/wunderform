@@ -1,12 +1,12 @@
-import React, { memo, useContext } from "react";
-import { Formik, Field, Form } from "formik";
+import React, { memo, useContext } from 'react';
+import { Formik, Field, Form } from 'formik';
 
-import CustomInputComponent from "../../../Shared/Input";
-import ButtonAnimatedFoward from "../../../Shared/ButtonAnimatedFoward";
-import ButtonAnimatedBackward from "../../../Shared/ButtonAnimatedBackward";
-import { FormInformationContext } from "../../../../containers/Register";
-import { Address } from "../../../../@types";
-import "./styles.scss";
+import CustomInputComponent from '../../../Shared/Input';
+import ButtonAnimatedFoward from '../../../Shared/ButtonAnimatedFoward';
+import ButtonAnimatedBackward from '../../../Shared/ButtonAnimatedBackward';
+import { FormInformationContext } from '../../../../containers/Register';
+import { Address } from '../../../../@types';
+import './styles.scss';
 
 interface Props {
   setPage: (value: number) => void;

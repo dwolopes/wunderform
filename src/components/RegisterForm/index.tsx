@@ -1,9 +1,9 @@
-import React, { memo, useContext } from "react";
+import React, { memo, useContext } from 'react';
 
-import { FormInformationContext } from "../../containers/Register";
-import handleFactory from "./handleFactory";
-import homeFleetImg from "../../assets/images/home-fleet.png";
-import "./style.scss";
+import { FormInformationContext } from '../../containers/Register';
+import handleFactory from './handleFactory';
+import homeFleetImg from '../../assets/images/home-fleet.png';
+import './style.scss';
 
 const RegisterForm = () => {
   const { page, setPage, setDisabledDecideStep } = useContext(

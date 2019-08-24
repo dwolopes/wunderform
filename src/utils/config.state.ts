@@ -1,10 +1,9 @@
 import createLoadingPlugin from '@rematch/loading';
 import createRematchPersist from '@rematch/persist';
-import storageSession from 'redux-persist/lib/storage/session';
 
-// export const loading = createLoadingPlugin({
-//     whitelist: ['calendar/getHolidaysAsync'],
-// });
+export const loading = createLoadingPlugin({
+    whitelist: ['formInformation/registerCustomer'],
+});
 
 export const persistPlugin = createRematchPersist({
     whitelist: ['formInformation'],

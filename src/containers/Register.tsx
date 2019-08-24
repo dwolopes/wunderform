@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useEffect, useState, useCallback } from "react";
 import { connect } from "react-redux";
 
 import RegisterForm from "../components/RegisterForm";
@@ -36,13 +36,7 @@ const Register = (props: MapState & Props) => {
   const [page, setPage] = useState<number>(0);
   const [disabledDecideStep, setDisabledDecideStep] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (!disabledDecideStep) {
-      decideStep();
-    }
-  }, [page, disabledDecideStep]);
-
-  const decideStep = () => {
+  const decideStep = useCallback(() => {
     switch (true) {
       case Object.keys(props.formInformation.personal).length === 4 &&
         page === 0:
@@ -53,7 +47,13 @@ const Register = (props: MapState & Props) => {
       default:
         break;
     }
-  };
+  }, [page, props]);
+
+  useEffect(() => {
+    if (!disabledDecideStep) {
+      decideStep();
+    }
+  }, [page, disabledDecideStep, decideStep]);
 
   return (
     <>
