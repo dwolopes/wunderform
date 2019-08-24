@@ -1,4 +1,4 @@
-![ReadableScreen](readme-images/readme-mais-page.png)
+![ReadableScreen](readme-images/first_page_wunder_form.png)
 # **Wunder Form**
 **Project Wunder Form** is an basic SPA (Single Page Appilication) to a user registration, like typically known from similar projects. The registration process contains 4 separated steps. Only one step is shown at a time to the customer.
 
@@ -15,12 +15,12 @@
 browser storage and the payment data will be posted to an external
 “demo-payment”.
 
-###View 4: Success page
+### View 4: Success page
 - Success message, when data are successful saved
 - Show the “paymentDataId”, returned by demo endpoint
 
 ## **Table of contents**
-- [**Readable**](#wunderForm)
+- [**wunder**](#wunder)
   - [**Table of contents**](#table-of-contents)
   - [**How to install**](#how-to-install-using-ubuntu)
   - [**How to run**](#How-to-install-run)
@@ -50,7 +50,7 @@ $ npm install
 
 > [Dowload Node.Js and NPM](https://nodejs.org/en/download/).
 
-[(Back to top)](#wunderForm)
+[(Back to top)](#wunder)
 
 ## **How to install run*
 
@@ -103,10 +103,10 @@ As the project has a lot of potencial to grow in features, I decided to add some
 - **Acessibility**: It is possible to user and be guid correctly with screen readers. Labels are applied in images and inputs in the form.
 - **Responsive Web Design**: Our app is fully responsible to mobile screens and tablets.
 
-***All improvements and librearies used is according to the task assignment permission which says "Feel free to extend existing libraries".
+***All improvements and libraries used is according to the task assignment permission which says "Feel free to extend existing libraries".
 
 
-[(Back to top)](#wunderForm)
+[(Back to top)](#wunder)
 
 ## **Built with**
 - [REACT](https://reactjs.org/) - A JavaScript library for building user interfaces
@@ -121,7 +121,7 @@ As the project has a lot of potencial to grow in features, I decided to add some
 
 You can check the other dependencies on _package.json_ file.
 
-[(Back to top)](#wunderForm)
+[(Back to top)](#wunder)
 
 
 ## **Contributing**
@@ -142,4 +142,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - [LinkedIn](https://www.linkedin.com/in/dwolopes/)
 
-[(Back to top)](#wunderForm)
+[(Back to top)](#wunder)
