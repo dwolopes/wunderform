@@ -1,0 +1,17 @@
+.container__footer {
+  height: 30px;
+  background: #364248;
+  display: flex;
+  justify-content: flex-end;
+  .logo {
+    padding: 3px 5px;
+    path {
+      fill: white;
+    }
+  }
+    /* ----------- iPhone 6+, 7+ and 8+ ans X----------- */
+  /* Portrait and Landscape */  
+  @media only screen and (min-width: 375px) and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    height: 90px;
+  }
+}

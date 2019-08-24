@@ -5,6 +5,7 @@ import RegisterForm from "../components/RegisterForm";
 import Header from "../components/Header";
 import { Personal, Address, Payment } from "../@types";
 import "./style.scss";
+import Footer from "../components/Footer";
 
 interface Props {
   page?: number;
@@ -73,6 +74,7 @@ const Register = (props: MapState & Props) => {
       >
         <RegisterForm />
       </FormInformationContext.Provider>
+      <Footer/>
     </>
   );
 };
