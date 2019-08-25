@@ -15,9 +15,9 @@ export const formInformation = {
       accountOwner: "",
       iban: "",
       paymentIdResponse: {
-		  error: false,
-		  paymentId: ""
-	  }
+        error: false,
+        paymentId: ""
+      }
     }
   },
   reducers: {
@@ -91,13 +91,12 @@ export const formInformation = {
           telephone,
           address,
           ...payload
-		});
-		
-		throw response;
-		// Retorna 400, como verificar ?
+        });
 
+        throw response;
+        // Retorna 400, como verificar ?
       } catch (error) {
-        dispatch.formInformation.registerPaymentIdResponse({error:true, paymentId: ""});
+        toast.error("Ops :( Algo deu errado tente novamente !");
       }
     },
 

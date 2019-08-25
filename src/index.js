@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'react-toastify/dist/ReactToastify.css';
+import 'tippy.js/index.css';
+import 'tippy.js/themes/light.css';
+import './assets/style/reset.scss';
+import './assets/style/base.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

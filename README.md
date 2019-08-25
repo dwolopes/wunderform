@@ -1,6 +1,8 @@
-![ReadableScreen](readme-images/first_page_wunder_form.png)
+![WunderFormScreen](readme_images/first_page_wunder_form.png)
 # **Wunder Form**
 **Project Wunder Form** is an basic SPA (Single Page Appilication) to a user registration, like typically known from similar projects. The registration process contains 4 separated steps. Only one step is shown at a time to the customer.
+
+[You can check it out here](https://test-b173f.firebaseapp.com/)
 
 ### View 1: Insert personal information
 - Firstname, lastname, telephone
@@ -44,9 +46,11 @@ To clone and run this application, you'll need [Git](https://git-scm.com/) and [
 $ git clone https://github.com/dwolopes/wunderform
 
 # Go into the repository and install the application dependencies
-$ cd reactnd-readable
+$ cd wunder-form
 $ npm install
+$ npm start
 ```
+** You can use ```Yarn``` as well.
 
 > [Dowload Node.Js and NPM](https://nodejs.org/en/download/).
 
@@ -97,7 +101,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## **Features**
 As the project has a lot of potencial to grow in features, I decided to add some new features beyond the default features that are demanded by the project specification.
-- **React and Redux**: React probably is the most powerfull and known JS framework. I have been working with that for almost 1 year, which makes even easier for me to accomplish this project. It give us the possibility of build apps faster, enjoying awesomes features of JS and turning our app safer and featured with high tech design to the frontend side. Besides that, to help me out controlling user data (and persist it to the Local Storage of the Browser) comming from the form and having just one source of truth related do information, I've used **Redux**.  
+- **React and Redux**: React probably is the most powerfull and known JS framework. I have been working with that for almost 1 year, which makes even easier for me to accomplish this project. It give us the possibility of build apps faster, enjoying awesomes features of JS and turning our app safer and featured with high tech design to the frontend side.
+- **Redux**: Controlling user data from the form and it provides just one source of truth related do information. 
 - **Typescript**: Using this feature is a way to prevent some basic erros. Besides that it gives de the possibility of apply better design patterns and guaratee and test better our application.
 - **Validation**: Added some validation to prevent future problems caused by the absence od date in the database related to the user.
 - **Acessibility**: It is possible to user and be guid correctly with screen readers. Labels are applied in images and inputs in the form.
@@ -111,7 +116,7 @@ As the project has a lot of potencial to grow in features, I decided to add some
 ## **Built with**
 - [REACT](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Redux](https://github.com/reduxjs/redux/) - Predictable state container for JavaScript apps.
-- [Rematch](https://github.com/rematch/rematch) - Rematch is Redux best practices without the boilerplate.
+- [Rematch](https://github.com/rematch/rematch) - Rematch is Redux best practices without the boilerplate and persist data in your browser way more simple.
 - [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - Responsible for managing routes in tge App.
 - [Material-UI](https://material-ui.com/) - React components that implement Google's Material Design to style the App.
 - [Typescript] - (https://www.npmjs.com/package/typescript) - TypeScript is a language for application-scale JavaScript.
