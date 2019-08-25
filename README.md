@@ -1,8 +1,10 @@
-![WunderFormScreen](readme_images/first_page_wunder_form.png)
+![WunderFormScreen](readme-images/first-page.png)
 # **Wunder Form**
 **Project Wunder Form** is an basic SPA (Single Page Appilication) to a user registration, like typically known from similar projects. The registration process contains 4 separated steps. Only one step is shown at a time to the customer.
 
-[You can check it out here](https://test-b173f.firebaseapp.com/)
+## Demo
+
+> [Check it live](https://test-b173f.firebaseapp.com/).
 
 ### View 1: Insert personal information
 - Firstname, lastname, telephone
@@ -22,10 +24,10 @@ browser storage and the payment data will be posted to an external
 - Show the “paymentDataId”, returned by demo endpoint
 
 ## **Table of contents**
-- [**wunder**](#wunder)
+- [**wunder**](#wunder-fleet)
   - [**Table of contents**](#table-of-contents)
   - [**How to install**](#how-to-install-using-ubuntu)
-  - [**How to run**](#How-to-install-run)
+  - [**How to run**](#How-to-general-run)
   - [**How it works**](#how-it-works)
     - [**Main Page**](#main-page)
     - [**Dashboard**](#dashboard)
@@ -54,48 +56,22 @@ $ npm start
 
 > [Dowload Node.Js and NPM](https://nodejs.org/en/download/).
 
-[(Back to top)](#wunder)
+[(Back to top)](#wunder-fleet)
 
-## **How to install run*
+## **How to genetal run*
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode, after install all the dependecies.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+[(Back to top)](#wunder-fleet)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## **How it works**
 
@@ -111,7 +87,7 @@ As the project has a lot of potencial to grow in features, I decided to add some
 ***All improvements and libraries used is according to the task assignment permission which says "Feel free to extend existing libraries".
 
 
-[(Back to top)](#wunder)
+[(Back to top)](#wunder-fleet)
 
 ## **Built with**
 - [REACT](https://reactjs.org/) - A JavaScript library for building user interfaces
@@ -126,7 +102,7 @@ As the project has a lot of potencial to grow in features, I decided to add some
 
 You can check the other dependencies on _package.json_ file.
 
-[(Back to top)](#wunder)
+[(Back to top)](#wunder-fleet)
 
 
 ## **Contributing**
@@ -147,4 +123,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - [LinkedIn](https://www.linkedin.com/in/dwolopes/)
 
-[(Back to top)](#wunder)
+[(Back to top)](#wunder-fleet)
