@@ -90,6 +90,11 @@ I would do improve a lot accessibility questions and responsive design. Furtherm
 ### Which things could be done better, than you’ve done it?
 
 I had some problems with the API endpoint given. It has been returning 400 error related to CORS problem. This way I could not show to the user the `paymentId`. I should save the `paymentId`, and show it to the user. Event though I could not retrieve that because of the mentioned errors, I saved it in that Local Dataset of the browser. I understood as a frontend task I should save in a Local Storage dataset. So as a improvement I would have saved that in a local database as well. I would create an API using some PHP frameworks, such as, Laravel YII2 and so on. I would create a post method, connect to MYsql database, and this method would be responsible for saved all user data, including the `paymentId`. These frameworks usually create almost every step based on `MVC` pattern. So, my frontend would a call the endpoint responsible to save in my database, just after the Wunder API promise been resolved.
+
+ - Image of the problem with CORS:
+
+![WunderFormScreen](readme-images/error_cors_wunder.png)
+
 And then my controller would send the data to a simple service, which would connect to the database using a model. So as you can see, it is not hard to have it done.
 A pattern was implemented, this is a very commom pattern in frontend world which you split your frontend using redux in `components` and `containers`, each component has their own style in their folder and you split them according to their function. 
 
