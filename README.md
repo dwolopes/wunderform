@@ -24,7 +24,7 @@ browser storage and the payment data will be posted to an external
 - Show the “paymentDataId”, returned by demo endpoint
 
 ## **Table of contents**
-- [**wunder**](#wunder-fleet)
+- [**Wunder Fleet**](#wunder-fleet)
   - [**Table of contents**](#table-of-contents)
   - [**How to install**](#how-to-install-using-ubuntu)
   - [**How to run**](#How-to-general-run)
@@ -75,6 +75,8 @@ You will also see any lint errors in the console.
 
 ## **How it works**
 
+### 
+
 ## **Features**
 As the project has a lot of potencial to grow in features, I decided to add some new features beyond the default features that are demanded by the project specification.
 - **React and Redux**: React probably is the most powerfull and known JS framework. I have been working with that for almost 1 year, which makes even easier for me to accomplish this project. It give us the possibility of build apps faster, enjoying awesomes features of JS and turning our app safer and featured with high tech design to the frontend side.
@@ -83,6 +85,9 @@ As the project has a lot of potencial to grow in features, I decided to add some
 - **Validation**: Added some validation to prevent future problems caused by the absence od date in the database related to the user.
 - **Acessibility**: It is possible to user and be guid correctly with screen readers. Labels are applied in images and inputs in the form.
 - **Responsive Web Design**: Our app is fully responsible to mobile screens and tablets.
+
+![Responsive on Errors](readme-images/responsive_design.png)
+![Responsive on Errors](readme-images/error_responsive.png)
 
 ***All improvements and libraries used is according to the task assignment permission which says "Feel free to extend existing libraries".
 
@@ -95,29 +100,21 @@ As the project has a lot of potencial to grow in features, I decided to add some
 - [Rematch](https://github.com/rematch/rematch) - Rematch is Redux best practices without the boilerplate and persist data in your browser way more simple.
 - [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - Responsible for managing routes in tge App.
 - [Material-UI](https://material-ui.com/) - React components that implement Google's Material Design to style the App.
-- [Typescript] - (https://www.npmjs.com/package/typescript) - TypeScript is a language for application-scale JavaScript.
-- [Formik] - (https://github.com/jaredpalmer/formik) - Build forms in React, without the tears.
-- [Node-sass] - (https://github.com/sass/node-sass) - Node-sass is a library that provides binding for Node.js to LibSass, the C version of the popular stylesheet preprocessor, Sass.
-- [Axios] - (https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
+- [Typescript](https://www.npmjs.com/package/typescript) - TypeScript is a language for application-scale JavaScript.
+- [Formik](https://github.com/jaredpalmer/formik) - Build forms in React, without the tears.
+- [Node-sass](https://github.com/sass/node-sass) - Node-sass is a library that provides binding for Node.js to LibSass, the C version of the popular stylesheet preprocessor, Sass.
+- [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
 
 You can check the other dependencies on _package.json_ file.
 
 [(Back to top)](#wunder-fleet)
 
 
-## **Contributing**
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## **Authors**
 
 * **Douglas Lopes** - *Initial work* - [wunder-form](https://github.com/dwolopes/wunderform)
 
 See also the list of [contributors](https://github.com/dwolopes/wunderform/graphs/contributors who participated in this project.
-
-## **License**
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## **Contact me**
 
