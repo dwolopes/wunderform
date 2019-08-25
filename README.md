@@ -86,7 +86,7 @@ As the project has a lot of potencial to grow in features, I decided to add some
 - **Acessibility**: It is possible to user and be guid correctly with screen readers. Labels are applied in images and inputs in the form.
 - **Responsive Web Design**: Our app is fully responsible to mobile screens and tablets.
 
-<img src="./readme-images/responsive_design.png" alt="alt text" width="500" height="500"
+<img src="./readme-images/responsive_design.png" alt="alt text" width="500" height="500"/>
 
 ***All improvements and libraries used is according to the task assignment permission which says "Feel free to extend existing libraries".
 
