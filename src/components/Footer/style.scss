@@ -16,5 +16,27 @@
   /* Portrait and Landscape */  
   @media only screen and (min-width: 375px) and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     height: 90px;
+    position: relative;
+  }
+
+  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+  /* Portrait and Landscape */
+  @media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    height: 90px;
+    position: relative;
+  }
+
+   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+  /* Portrait and Landscape */
+  @media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    height: 90px;
+    position: relative;
+  }
+
+      /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+  /* Portrait and Landscape */
+  @media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    height: 90px;
+    position: relative;
   }
 }
