@@ -35,10 +35,7 @@
   - [**Table of contents**](#table-of-contents)
   - [**How to install**](#how-to-install-using-ubuntu)
   - [**How to run**](#How-to-general-run)
-  - [**How it works**](#how-it-works)
-    - [**Main Page**](#main-page)
-    - [**Dashboard**](#dashboard)
-    - [**Details Page**](#details-page)
+  - [**Aditional Information**](#aditional-information)
   - [**Features**](#features)
   - [**Built with**](#built-with)
   - [**Contributing**](#contributing)
@@ -91,12 +88,20 @@ I would do improve a lot accessibility questions and responsive design. Furtherm
 
 I had some problems with the API endpoint given. It has been returning 400 error related to CORS problem. This way I could not show to the user the `paymentId`. I should save the `paymentId`, and show it to the user. Event though I could not retrieve that because of the mentioned errors, I saved it in that Local Dataset of the browser. I understood as a frontend task I should save in a Local Storage dataset. So as a improvement I would have saved that in a local database as well. I would create an API using some PHP frameworks, such as, Laravel YII2 and so on. I would create a post method, connect to MYsql database, and this method would be responsible for saved all user data, including the `paymentId`. These frameworks usually create almost every step based on `MVC` pattern. So, my frontend would a call the endpoint responsible to save in my database, just after the Wunder API promise been resolved.
 
- - Image of the problem with CORS(Its was teste local, with Postman and on firebase):
+ - Image of the problem with CORS(It was teste local, with Postman and on firebase):
 
 ![WunderFormScreen](readme-images/error_cors_wunder.png)
 
+To treat case of errors a toast is presented. 
+
 And then my controller would send the data to a simple service, which would connect to the database using a model. So as you can see, it is not hard to have it done.
-A pattern was implemented, this is a very commom pattern in frontend world which you split your frontend using redux in `components` and `containers`, each component has their own style in their folder and you split them according to their function. 
+A pattern was implemented, this is a very commom pattern in frontend world which you split your frontend using redux in `components` and `containers`, each component has their own style in their folder and you split them according to their function.
+
+There is some stuff that will been included during this last week of august:
+
+ - fonts according to tha branch of Wunder.
+ - In case I need to create a local database to save user data I could do that. I just need the problem of CORS to be solved. This way I can test the sucess component and the API I would have built.
+ - Improve accessibility and Responsive Web Design; I take this issues very seriously. 
 
 ## **Features**
 
@@ -137,8 +142,6 @@ You can check the other dependencies on _package.json_ file.
 ## **Authors**
 
 - **Douglas Lopes** - _Initial work_ - [wunder-form](https://github.com/dwolopes/wunderform)
-
-See also the list of [contributors](https://github.com/dwolopes/wunderform/graphs/contributors who participated in this project.
 
 ## **Contact me**
 
