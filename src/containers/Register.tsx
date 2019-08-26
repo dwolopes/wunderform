@@ -4,11 +4,12 @@ import { connect } from "react-redux";
 import RegisterForm from "../components/RegisterForm";
 import Header from "../components/Header";
 import { Personal, Address, Payment } from "../@types";
-import "./style.scss";
 import Footer from "../components/Footer";
+import Loading from "../components/Shared/Loading";
 
 interface Props {
   page?: number;
+  loading: any;
   setPage?: (page: any) => void;
 }
 
@@ -18,6 +19,7 @@ interface MapState {
     address: Address;
     payment: Payment;
   };
+  loading: any;
 }
 
 interface Props {
@@ -34,6 +36,7 @@ interface State {
 export const FormInformationContext = React.createContext<any>({});
 
 const Register = (props: MapState & Props) => {
+  console.log(props.loading)
   const [page, setPage] = useState<number>(0);
   const [disabledDecideStep, setDisabledDecideStep] = useState<boolean>(false);
 
@@ -68,19 +71,22 @@ const Register = (props: MapState & Props) => {
             getPaymentInformation: props.getPaymentInformation,
             page,
             setPage,
-            setDisabledDecideStep
+            setDisabledDecideStep,
+            loading: props.loading
           } as MapState & Props & State
         }
       >
         <RegisterForm />
       </FormInformationContext.Provider>
       <Footer/>
+      {props.loading && <Loading />}
     </>
   );
 };
 
 const mapState = (state: MapState) => ({
-  formInformation: state.formInformation
+  formInformation: state.formInformation,
+   loading: state.loading.effects.formInformation.getPaymentInformation
 });
 
 const mapDispatch = (dispatch: any) => ({

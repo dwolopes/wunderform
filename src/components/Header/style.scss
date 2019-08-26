@@ -1,19 +1,24 @@
 .container__header {
-  height: 58px;
-  background-color: #fff;
-  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+	height: 58px;
+	background-color: #fff;
+	box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	@media (max-width: 470px) {
+		justify-content: center;
+	}
+	& > div {
+		padding-left: 30px;
+		@media (max-width: 470px) {
+			padding-left: 0px;
+		}
+	}
 
-  & > div {
-    padding-left: 30px;
-  }
-
-  .logo {
-    path {
-      fill: black;
-    }
-  }
+	.logo {
+		path {
+			fill: black;
+		}
+	}
 }

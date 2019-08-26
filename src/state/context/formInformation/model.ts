@@ -94,7 +94,6 @@ export const formInformation = {
         });
 
         throw response;
-        // Retorna 400, como verificar ?
       } catch (error) {
         toast.error("Ops :( Something went wrong! Try Again :)");
       }

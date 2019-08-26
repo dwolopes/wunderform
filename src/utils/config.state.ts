@@ -2,7 +2,7 @@ import createLoadingPlugin from '@rematch/loading';
 import createRematchPersist from '@rematch/persist';
 
 export const loading = createLoadingPlugin({
-    whitelist: ['formInformation/registerCustomer'],
+    whitelist: ['formInformation/getPaymentInformation'],
 });
 
 export const persistPlugin = createRematchPersist({

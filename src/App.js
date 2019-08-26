@@ -6,13 +6,13 @@ import { getPersistor } from "@rematch/persist";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import { ToastContainer } from "react-toastify";
 
-import { persistPlugin } from "./utils/config.state";
+import { loading, persistPlugin } from "./utils/config.state";
 import Routes from "./routes";
 import models from "./state";
 
 const store = init({
   models,
-  plugins: [persistPlugin]
+  plugins: [persistPlugin, loading]
 });
 
 const persistor = getPersistor();
