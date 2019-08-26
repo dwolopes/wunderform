@@ -1,8 +1,11 @@
 .container__footer {
-  height: 30px;
-  background: #364248;
-  display: flex;
-  justify-content: flex-end;
+    height: 30px;
+    background: #364248;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   .logo {
     padding: 3px 5px;
     path {
