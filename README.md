@@ -118,6 +118,8 @@ As the project has a lot of potencial to grow in features, I decided to add some
 <img src="./readme-images/responsive_design.png" alt="alt text" width="350" height="500"/>
 <img src="./readme-images/error_responsive.png" alt="alt text" width="350" height="500"/>
 </div>
+<img src="./readme-images/responsive_design-loading.jpeg" alt="alt text" width="350" height="500"/>
+</div>
 
 \*\*\*All improvements and libraries used is according to the task assignment permission which says "Feel free to extend existing libraries".
 
