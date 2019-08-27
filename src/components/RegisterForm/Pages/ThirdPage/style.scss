@@ -1,11 +1,15 @@
 form {
-    .inputs__thirdpage {
-        display: flex;
-    }
-    .actions__thirdpage{
-        padding: 20px 20px;
-        padding-bottom: 0px;
-        display: flex;
-        justify-content: flex-end;
-    }
+	.inputs__thirdpage {
+		display: flex;
+	}
+	.actions__thirdpage {
+		padding: 20px 20px;
+		padding-bottom: 0px;
+		display: flex;
+		justify-content: flex-end;
+		@media (max-width: 470px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 }
